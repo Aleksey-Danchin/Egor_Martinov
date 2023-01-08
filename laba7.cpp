@@ -337,5 +337,6 @@ int main () {
 
         fclose(file);
         cout << "Data saved." << endl;
+        delete clients;
     }
 }

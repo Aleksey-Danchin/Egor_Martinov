@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Структура
 struct deposid {
     int number;
     char* surname;
@@ -10,9 +11,11 @@ struct deposid {
     double score;
 };
 
+// Коллекция депозитов
 int clients_number = 0;
 deposid* clients = new deposid[0];
 
+// Функция сравнение массивов символов
 int mystrcmp(char* str1, char* str2 ) {
     while(*str1 && *str2 && *str1 == *str2 ) {
         str1++;
@@ -23,6 +26,7 @@ int mystrcmp(char* str1, char* str2 ) {
     return d == 0 ? 0 : d > 0 ? 1 : -1;
 }
 
+// Добавляет нового клиента
 void add_client () {
     deposid client;
 
@@ -51,6 +55,7 @@ void add_client () {
     clients_number += 1;
 }
 
+// Вывод таблицы клиентов
 void print_clients (deposid* clients, int number) {
     cout << "Number\t\tName\t\tSurname\t\tScore" << endl;
     cout << "-----------------------------------------------------" << endl;
@@ -62,9 +67,9 @@ void print_clients (deposid* clients, int number) {
         cout << clients[i].score << "\t\t";
         cout << endl;
     }
-
 }
 
+// Печатать клиентов со счетом больше чем limit
 void print_biggest (float limit) {
     int counter = 0;
 
@@ -87,6 +92,7 @@ void print_biggest (float limit) {
     print_clients(biggest_clients, counter);
 }
 
+// Печатает счита определнного клиента
 void print_user (char* name, char* surname) {
     int counter = 0;
 
@@ -165,4 +171,3 @@ int main () {
         }
     }
 }
-

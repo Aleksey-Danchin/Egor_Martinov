@@ -12,3 +12,7 @@ run6:
 	g++ task6.cpp && ./a.out && rm a.out
 run7:
 	g++ task7.cpp && ./a.out && rm a.out
+laba6:
+	g++ laba6.cpp && ./a.out && rm a.out
+laba7:
+	g++ laba7.cpp && ./a.out && rm a.out
